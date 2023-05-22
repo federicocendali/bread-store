@@ -2,11 +2,18 @@ import React from "react";
 import { View, Text } from "react-native";
 
 import { styles } from "./styles";
+import { PRODUCTS } from "../../constants";
 
-const Product = () => {
+const Product = ({ route }) => {
+  const { productId } = route.params;
+
+  const product = PRODUCTS.find((product) => product.id === productId);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Product</Text>
+      <Text style={styles.name}>{product.name}</Text>
+      <Text style={styles.description}>{product.description}</Text>
+      <Text style={styles.price}>{product.price} USD</Text>
+      <Text style={styles.weight}>Weight: {product.weight}</Text>
     </View>
   );
 };

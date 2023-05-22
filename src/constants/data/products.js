@@ -6,6 +6,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de masa madre",
     weight: "300gr",
+    color: "#F4E9CD",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de masa madre",
     weight: "150gr",
+    color: "#F4E9CD",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde integral masa madre",
     weight: "450gr",
+    color: "#A9C6C3",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema integral de masa madre",
     weight: "250gr",
+    color: "#A9C6C3",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de trigo de masa madre",
     weight: "450gr",
+    color: "#6BAAB3",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de trigo de masa madre",
     weight: "250gr",
+    color: "#6BAAB3",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de maíz de masa madre",
     weight: "450gr",
+    color: "#68C9F3",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de maíz de masa madre",
     weight: "250gr",
+    color: "#68C9F3",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de arroz de masa madre",
     weight: "450gr",
+    color: "#E9D39B",
   },
   {
     id: 10,
@@ -78,5 +87,6 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de arroz de masa madre",
     weight: "250gr",
+    color: "#E9D39B",
   },
 ];
