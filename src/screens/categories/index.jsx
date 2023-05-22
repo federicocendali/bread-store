@@ -7,7 +7,11 @@ import { CATEGORIES } from "../../constants";
 
 const Categories = ({ navigation }) => {
   const onSelected = (item) => {
-    console.warn("item", item);
+    navigation.navigate("Products", {
+      categoryId: item.id,
+      name: item.name,
+      color: item.color,
+    });
   };
 
   const renderItem = ({ item }) => <CategoryItem item={item} onSelected={onSelected} />;
