@@ -27,4 +27,8 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: "Kanit-Regular",
   },
+  image: {
+    width: "100%",
+    height: 260,
+  },
 });
