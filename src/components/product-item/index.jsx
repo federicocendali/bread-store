@@ -13,7 +13,7 @@ const ProductItem = ({ item, onSelected, color }) => {
           <Text style={styles.name}>{item.name}</Text>
         </View>
         <View>
-          <Text style={styles.price}>{item.price} USD</Text>
+          <Text style={styles.price}>USD {item.price}</Text>
           <Text style={styles.weight}>Weight: {item.weight}</Text>
         </View>
       </TouchableOpacity>

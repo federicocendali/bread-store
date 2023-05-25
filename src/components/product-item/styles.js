@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   containerTouchable: {
     flex: 1,
     backgroundColor: COLORS.secondary,
-    shadowColor: "#000",
+    shadowColor: COLORS.black,
     shadowOffset: {
       width: 0,
       height: 5,
