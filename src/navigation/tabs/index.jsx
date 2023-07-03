@@ -1,5 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useSelector } from "react-redux";
 
 import { COLORS } from "../../constants";
 import CartNavigator from "../cart";
@@ -9,6 +10,8 @@ import ShopNavigator from "../shop";
 const BottomTab = createBottomTabNavigator();
 
 const TabsNavigator = () => {
+  const cart = useSelector((state) => state.cart.data);
+
   return (
     <BottomTab.Navigator
       initialRouteName="ShopTab"
@@ -59,6 +62,13 @@ const TabsNavigator = () => {
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons name={focused ? "cart" : "cart-outline"} size={size} color={color} />
           ),
+          tabBarBadge: cart.length,
+          tabBarBadgeStyle: {
+            backgroundColor: COLORS.secondary,
+            color: COLORS.text,
+            fontFamily: "Kanit-Regular",
+            fontSize: 11,
+          },
         }}
       />
     </BottomTab.Navigator>
