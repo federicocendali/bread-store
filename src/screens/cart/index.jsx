@@ -1,18 +1,24 @@
 import React from "react";
 import { View, FlatList, Text, TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { styles } from "./styles";
 import { CartItem } from "../../components";
+import { confirmOrder, removeFromCart } from "../../store/actions";
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const total = useSelector((state) => state.cart.total);
   const cart = useSelector((state) => state.cart.data);
 
   const isCartEmpty = cart.length === 0;
 
   const onRemove = (id) => {
-    console.warn(id);
+    dispatch(removeFromCart(id));
+  };
+
+  const onConfirmOrder = () => {
+    dispatch(confirmOrder({ cart, total }));
   };
 
   const renderItem = ({ item }) => <CartItem item={item} onRemove={onRemove} />;
@@ -31,7 +37,7 @@ const Cart = () => {
         <TouchableOpacity
           disabled={isCartEmpty}
           style={isCartEmpty ? styles.buttonDisabled : styles.buttonConfirm}
-          onPress={() => null}>
+          onPress={onConfirmOrder}>
           <Text style={styles.buttonConfirmText}>Confirm</Text>
           <View style={styles.totalContainer}>
             <Text style={styles.totalText}>Total: </Text>
