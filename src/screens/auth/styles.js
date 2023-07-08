@@ -26,6 +26,7 @@ export const styles = StyleSheet.create({
     shadowRadius: 6.27,
     elevation: 10,
     minHeight: 340,
+    borderRadius: 15,
   },
   title: {
     fontFamily: "Kanit-Bold",
